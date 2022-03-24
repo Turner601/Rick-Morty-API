@@ -1,0 +1,37 @@
+<%- include('../partials/header'); %>
+
+<main class="main main-episodes container text-center">
+    <h2 class="main-h2">
+        <u><%= name %></u>
+    </h2>
+</main>
+<section class="section section-episodes container text-center">
+    <div class="row">
+        <% data.forEach(item => { %>
+            <div class="col-md-3">
+                <figure class="figure figure-episodes">
+                    <figcaption class="figcaption figcap-episodes">
+                        <b>Season - Episode</b>
+                    </figcaption>
+                    <figcaption class="figcaption figcap-episodes">
+                        <%= item.season %> - <%= item.episode %>
+                    </figcaption>
+                    <figcaption class="figcaption figcap-episodes">
+                        <b>Title</b>
+                    </figcaption>
+                    <figcaption class="figcaption figcap-episodes">
+                        <%= item.name %>
+                    </figcaption>
+                    <figcaption class="figcaption figcap-episodes">
+                        <b>Date Aired</b>
+                    </figcaption>
+                    <figcaption class="figcaption figcap-episodes">
+                        <%= item.air_date %>
+                    </figcaption>
+                </figure>
+            </div>
+        <% }) %>
+    </div>
+</section>
+
+<%- include('../partials/footer'); %>

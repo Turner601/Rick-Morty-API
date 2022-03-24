@@ -1,0 +1,32 @@
+<%- include('../partials/header'); %>
+
+<main class="main main-single-characters container text-center">
+    <h2 class="main-h2">
+        <u><%= name %></u>
+    </h2>
+    <section class="section section-single-characters">
+            <figure class="figure figure-single-characters">
+                <img src="<%= data.image %>" alt="<%= data.name %>" class="img-fluid single-character-image">
+                <figcaption class="figcaption figcap-single-character">
+                    <b>Name:</b> <%= data.name %>
+                </figcaption>
+                <figcaption class="figcaption figcap-single-character">
+                    <b>Status:</b> <%= data.status %>
+                </figcaption>
+                <figcaption class="figcaption figcap-single-character">
+                    <b>Species:</b> <%= data.species %>
+                </figcaption>
+                <figcaption class="figcaption figcap-single-character">
+                    <b>Type:</b> <%= data.type %>
+                </figcaption>
+                <figcaption class="figcaption figcap-single-character">
+                    <b>Gender:</b> <%= data.gender %>
+                </figcaption>
+                <figcaption class="figcaption figcap-single-character">
+                    <b>Place Of Origin:</b> <%= data.origin %>
+                </figcaption>
+            </figure>
+    </section>
+</main>
+
+<%- include('../partials/footer'); %>

@@ -1,0 +1,37 @@
+<%- include('../partials/header'); %>
+
+<main class="main main-locations container text-center">
+    <h2 class="main-h2">
+        <u><%= name %></u>
+    </h2>
+    <section class="section section-locations">
+        <div class="row">
+            <% data.forEach(item => { %>
+                <div class="col-md-3">
+                    <figure class="figure figure-locations">
+                        <figcaption class="figcaption figcap-locations">
+                            <b><u>Name</u></b>
+                        </figcaption>
+                        <figcaption class="figcaption figcap-locations">
+                            <%= item.name %>
+                        </figcaption>
+                        <figcaption class="figcaption figcap-locations">
+                            <b><u>Type</u></b>
+                        </figcaption>
+                        <figcaption class="figcaption figcap-locations">
+                            <%= item.type %>
+                        </figcaption>
+                        <figcaption class="figcaption figcap-locations">
+                            <b><u>Dimension</u></b>
+                        </figcaption>
+                        <figcaption class="figcaption figcap-locations">
+                            <%= item.dimension %>
+                        </figcaption>
+                    </figure>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+</main>
+
+<%- include('../partials/footer'); %>

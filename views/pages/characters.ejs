@@ -1,0 +1,25 @@
+<%- include('../partials/header'); %>
+
+<main class="main main-characters containers">
+    <h2 class="main-h2 text-center">
+        <u><%= name %></u>
+    </h2>
+    <section class="section section-characters text-center">
+        <div class="row">
+            <% data.forEach(item => { %>
+                <div class="col-md-4">
+                    <figure class="figure figure-character">
+                        <a href="/characters/<%= item.id %>">
+                            <img class="img-fluid character-image" src="<%= item.image %>" alt="<%= item.name %>">
+                        </a>
+                        <figcaption class="figcaption figcap-character">
+                            <%= item.name %>
+                        </figcaption>
+                    </figure>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+</main>
+
+<%- include('../partials/footer'); %>
